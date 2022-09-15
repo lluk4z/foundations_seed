@@ -10,11 +10,17 @@ import SwiftUI
 struct ContentView: View {
     
     let cards = card_info.listarTodos()
+    
+    let rows = [
+            GridItem(.fixed(1)),
+            GridItem(.fixed(1))
+        ]
     var body: some View {
         VStack{
-        Text("Seed").padding()
+            Text("Seed").font(.title).fontWeight(.light).padding(.all, -8.0)
         List(cards){ card in
-            HStack {
+            VStack{
+            HStack(alignment: .top) {
                 Image(card.iconImg)
                     .aspectRatio(contentMode: .fit)
                 VStack{
@@ -28,15 +34,32 @@ struct ContentView: View {
                         .fontWeight(.thin)
                         .multilineTextAlignment(.leading)
                         .padding(.leading)
-                    
-                    HStack{
-                    Image(card.imgPrev[0]).padding()
-                    Image(card.imgPrev[1])
-                    }
-                        
                 }
                 
+                
             }
+            .padding(.leading)
+                
+                ScrollView(.horizontal) {
+                            LazyHGrid(rows: rows, alignment: .center) {
+                                ForEach(cards) { card in
+                                    HStack{
+                                        Image(card.imgPrev[0]).resizable()
+                                            .aspectRatio(contentMode: .fit)
+                                            .frame(width: 170, height: 170)
+                                    Image(card.imgPrev[1])
+                                            .resizable()
+                                            .aspectRatio(contentMode: .fit)
+                                            .frame(width: 170, height: 130)
+                                    }
+                                    .padding([.top, .leading], 2.0)
+                                        
+                                }
+                            }
+                            .frame(height: 150)
+            }
+            }
+            .padding(.vertical, 2.0)
             
         }
         }
