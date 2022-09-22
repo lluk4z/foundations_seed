@@ -5,8 +5,8 @@
 //  Created by Lucas Emanuel on 13/09/22.
 //
 
-import XCTest
-
+//import XCTest
+/*
 class Tests_macOS: XCTestCase {
 
     override func setUpWithError() throws {
@@ -40,3 +40,4 @@ class Tests_macOS: XCTestCase {
         }
     }
 }
+*/

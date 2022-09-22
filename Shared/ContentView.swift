@@ -9,7 +9,9 @@ import SwiftUI
 
 struct ContentView: View {
     
-    let cards = card_info.listarTodos()
+    @StateObject var viewModel = ProjectsViewModel()
+    
+    
     
     let rows = [
             GridItem(.fixed(1)),
@@ -18,7 +20,7 @@ struct ContentView: View {
     var body: some View {
         VStack{
             Text("Seed").font(.title).fontWeight(.light).padding(.all, -8.0)
-        List(cards){ card in
+            List(viewModel.projects){ card in
             VStack{
             HStack(alignment: .top) {
                 Image(card.iconImg)
@@ -42,7 +44,7 @@ struct ContentView: View {
                 
                 ScrollView(.horizontal) {
                             LazyHGrid(rows: rows, alignment: .center) {
-                                ForEach(cards) { card in
+                                ForEach(viewModel.projects) { card in
                                     HStack{
                                         Image(card.imgPrev[0]).resizable()
                                             .aspectRatio(contentMode: .fit)
