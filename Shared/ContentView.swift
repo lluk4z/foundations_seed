@@ -43,17 +43,14 @@ struct ContentView: View {
             .padding(.leading)
                 
                 ScrollView(.horizontal) {
-                            LazyHGrid(rows: rows, alignment: .center) {
-                                ForEach(viewModel.projects) { card in
-                                    HStack{
-                                        Image(card.imgPrev[0]).resizable()
-                                            .aspectRatio(contentMode: .fit)
-                                            .frame(width: 170, height: 170)
-                                    Image(card.imgPrev[1])
-                                            .resizable()
-                                            .aspectRatio(contentMode: .fit)
-                                            .frame(width: 170, height: 130)
-                                    }
+                            HStack {
+                                ForEach(card.imgPrev, id: \.self) { img in
+                                    Image(img)
+                                        .resizable()
+                                        .aspectRatio(contentMode: .fit)
+                                        .frame(width: 170, height: 170)
+
+                                }
                                     .padding([.top, .leading], 2.0)
                                         
                                 }
@@ -66,7 +63,7 @@ struct ContentView: View {
         }
         }
     }
-}
+
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
