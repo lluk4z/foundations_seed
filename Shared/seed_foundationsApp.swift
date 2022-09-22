@@ -20,7 +20,7 @@ struct card_info: Identifiable {
 struct seed_foundationsApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            mainTabView()
         }
     }
 }
