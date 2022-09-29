@@ -25,7 +25,19 @@ struct card_info: Identifiable {
     
 }
 
-@main
+struct card_categoria: Identifiable {
+    var id: UUID = UUID()
+    let title: String
+    let cor: String
+    
+    static func listar() -> [card_categoria] {
+        return [
+        card_categoria(title: "Diversidade", cor: "Green"),
+        card_categoria(title: "Social", cor: "Blue")
+        ]
+    }
+}
+
 struct seed_foundationsApp: App {
     var body: some Scene {
         WindowGroup {

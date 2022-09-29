@@ -1,29 +1,26 @@
 //
-//  ContentView.swift
-//  Shared
+//  tela_search.swift
+//  seed_foundations
 //
-//  Created by Lucas Emanuel on 13/09/22.
+//  Created by Lucas Emanuel on 27/09/22.
 //
 
 import SwiftUI
 
-struct ContentView: View {
-    
+struct tela_search: View {
     let pesquisas = card_categoria.listar()
     var body: some View {
         List(pesquisas) { pesquisa in
             HStack {
                 Text(pesquisa.title)
-                    .padding(.bottom, 1.0)
             }
-            .padding(.bottom, 2.0)
             
         }
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
+struct tela_search_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        tela_search()
     }
 }
