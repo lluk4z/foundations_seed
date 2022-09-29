@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     
+
     @StateObject var viewModel = ProjectsViewModel()
     
     
@@ -63,8 +64,17 @@ struct ContentView: View {
             }
             }
             .padding(.vertical, 2.0)
+
+    let pesquisas = card_categoria.listar()
+    var body: some View {
+        List(pesquisas) { pesquisa in
+            HStack {
+                Text(pesquisa.title)
+                    .padding(.bottom, 1.0)
+            }
+            .padding(.bottom, 2.0)
+
             
-        }
         }
     }
 
