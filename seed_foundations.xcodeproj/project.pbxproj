@@ -17,6 +17,8 @@
 		DD33390D28D0CC6700C309E7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD3338E328D0CC6300C309E7 /* ContentView.swift */; };
 		DD33390E28D0CC6700C309E7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DD3338E428D0CC6700C309E7 /* Assets.xcassets */; };
 		DD33390F28D0CC6700C309E7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DD3338E428D0CC6700C309E7 /* Assets.xcassets */; };
+		DD33392528E5D96600C309E7 /* ProjectsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD33392428E5D96600C309E7 /* ProjectsViewModel.swift */; };
+		DD33392628E5D96600C309E7 /* ProjectsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD33392428E5D96600C309E7 /* ProjectsViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,7 @@
 		DD33390228D0CC6700C309E7 /* Tests macOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tests macOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD33390628D0CC6700C309E7 /* Tests_macOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOS.swift; sourceTree = "<group>"; };
 		DD33390828D0CC6700C309E7 /* Tests_macOSLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOSLaunchTests.swift; sourceTree = "<group>"; };
+		DD33392428E5D96600C309E7 /* ProjectsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectsViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +103,7 @@
 				DD3338E228D0CC6300C309E7 /* seed_foundationsApp.swift */,
 				DD3338E328D0CC6300C309E7 /* ContentView.swift */,
 				DD3338E428D0CC6700C309E7 /* Assets.xcassets */,
+				DD33392428E5D96600C309E7 /* ProjectsViewModel.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -300,6 +304,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DD33390C28D0CC6700C309E7 /* ContentView.swift in Sources */,
+				DD33392528E5D96600C309E7 /* ProjectsViewModel.swift in Sources */,
 				DD33390A28D0CC6700C309E7 /* seed_foundationsApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -309,6 +314,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DD33390D28D0CC6700C309E7 /* ContentView.swift in Sources */,
+				DD33392628E5D96600C309E7 /* ProjectsViewModel.swift in Sources */,
 				DD33390B28D0CC6700C309E7 /* seed_foundationsApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
