@@ -5,19 +5,55 @@
 //  Created by Lucas Emanuel on 13/09/22.
 //
 import SwiftUI
-struct card_info: Identifiable {
+
+class card_info: ObservableObject, Identifiable {
+    
     var id: UUID = UUID()
-    let iconImg: String
-    let title: String
-    let textPreview: String
-    let imgPrev: [String]
+    var addressStreet: String
+    var addressCity: String
+    var email: String
+    var number: String
+    var instagram: String
+    var linkedin: String
+    var fullText: String
+    var iconImg: String
+    var title: String
+    var textPreview: String
+    var imgPrev: [String]
+    @Published var comments: [String]
+    @Published var favorito: Bool
+    
+    init(addressStreet: String, addressCity: String, email: String, number: String, instagram: String, linkedin: String, fullText: String, iconImg: String, title: String, textPreview: String, imgPrev: [String], comments: [String], favorito: Bool) {
+        
+        self.addressStreet = addressStreet
+        self.addressCity = addressCity
+        self.email = email
+        self.number = number
+        self.instagram = instagram
+        self.linkedin = linkedin
+        self.fullText = fullText
+        self.iconImg = iconImg
+        self.title = title
+        self.textPreview = textPreview
+        self.imgPrev = imgPrev
+        self.comments = comments
+        self.favorito = false
+        
+    }
     
 }
+
 @main
 struct seed_foundationsApp: App {
+    
     var body: some Scene {
+        
         WindowGroup {
-            mainTabView()
+            
+            MainTabView()
+            
         }
+        
     }
+    
 }
