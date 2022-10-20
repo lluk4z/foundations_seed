@@ -11,10 +11,6 @@ struct InsideProject: View {
     
     @ObservedObject var card: card_info
     @State var comentario = ""
- 
-//    static func fav() -> card_info {
-//        return card_info(favorito: true)
-//    }
     
     var body: some View {
         
@@ -161,8 +157,12 @@ struct InsideProject: View {
             
             Button("Enviar"){
                 
-                card.comments.insert(comentario, at: 0)
-                comentario = ""
+                if(comentario.count > 0){
+                    
+                    card.comments.insert(comentario, at: 0)
+                    comentario = ""
+                    
+                }
                 
             }
             

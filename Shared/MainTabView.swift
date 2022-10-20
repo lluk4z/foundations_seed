@@ -11,29 +11,37 @@ struct MainTabView: View {
     
     var body:some View {
         
-        TabView {
+        VStack {
             
-            PrimeiraTab().tabItem{
+            Text("Seed")
+                .font(.title)
+                .fontWeight(.light)
+                .foregroundColor(Color(red: 0.2039, green: 0.7804, blue: 0.3490))
+            
+            TabView {
                 
-                Label("", systemImage: "house")
+                PrimeiraTab().tabItem{
+                    
+                    Label("", systemImage: "house")
+                    
+                }
+                SegundaTab().tabItem{
+                    
+                    Label("", systemImage: "magnifyingglass")
+                    
+                }
+                TerceiraTab().tabItem{
+                    
+                    Label("", systemImage: "heart")
+                    
+                }
                 
             }
-            SegundaTab().tabItem{
-                
-                Label("", systemImage: "magnifyingglass")
-                
-            }
-            TerceiraTab().tabItem{
-                
-                Label("", systemImage: "heart")
-                
-            }
+            .accentColor(Color(red: 0.2039, green: 0.7804, blue: 0.3490))
             
         }
-        .accentColor(Color(red: 0.2039, green: 0.7804, blue: 0.3490))
         
     }
-    
 }
 
 struct MainTabView_Previews: PreviewProvider {
