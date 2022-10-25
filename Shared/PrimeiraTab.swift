@@ -7,8 +7,8 @@
 import SwiftUI
  
 struct PrimeiraTab: View {
-
-    @StateObject var viewModel = ProjectsModel()
+    
+    @ObservedObject var state : StateManager
 
     let rows = [
         GridItem(.fixed(1)),
@@ -19,11 +19,11 @@ struct PrimeiraTab: View {
 
         NavigationView {
 
-                List(viewModel.projects){ card in
+                List(ProjectsModel.projects){ card in
                     
                     VStack{
 
-                        NavigationLink (destination: InsideProject(card: card)){
+                        NavigationLink (destination: InsideProject(state: state, card: card)){
 
                             HStack(alignment: .top) {
 

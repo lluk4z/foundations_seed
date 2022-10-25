@@ -8,7 +8,7 @@ import SwiftUI
  
 class ProjectsModel: ObservableObject {
     
-    @Published var projects = [
+    static var projects = [
         card_info(addressStreet: "Av. Jorn. Aníbal Fernandes, s/n",
                   addressCity: "Recife - PE, 50740-560",
                   email: "ada@cin.ufpe.br",

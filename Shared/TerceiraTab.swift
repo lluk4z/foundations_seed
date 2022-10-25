@@ -9,7 +9,7 @@ import SwiftUI
 
 struct TerceiraTab: View {
     
-    @StateObject var viewModel = ProjectsModel()
+    @ObservedObject var state : StateManager
     
     let rows = [
         GridItem(.fixed(1)),
@@ -18,15 +18,22 @@ struct TerceiraTab: View {
     
     var body: some View {
         
-        NavigationView {
+        VStack{
+            
+            Text("Favoritos")
+                .font(.title)
+                .fontWeight(.light)
+                .foregroundColor(Color(red: 0.2039, green: 0.7804, blue: 0.3490))
+            
+            NavigationView {
                 
-                List(viewModel.projects){ card in
+                List(ProjectsModel.projects){ card in
                     
                     if(card.favorito){
                         
                         VStack{
                             
-                            NavigationLink (destination: InsideProject(card: card)){
+                            NavigationLink (destination: InsideProject(state: state, card: card)){
                                 
                                 HStack(alignment: .top) {
                                     
@@ -54,9 +61,7 @@ struct TerceiraTab: View {
                             .navigationBarHidden(true)
                             
                         }
-                    }else {
                         
-                        EmptyView()
                     }
                     
                 }.padding(.vertical, 2.0)
@@ -66,6 +71,8 @@ struct TerceiraTab: View {
         }
         
     }
+    
+}
 
 struct TerceiraTab_Previews: PreviewProvider {
 
