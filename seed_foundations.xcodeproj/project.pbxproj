@@ -19,6 +19,8 @@
 		AC142AD32901E12D00A51092 /* TerceiraTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC142AD12901E12D00A51092 /* TerceiraTab.swift */; };
 		AC142AD52901E63000A51092 /* CardInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC142AD42901E63000A51092 /* CardInfo.swift */; };
 		AC142AD62901E63000A51092 /* CardInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC142AD42901E63000A51092 /* CardInfo.swift */; };
+		AC51990A29083CFE0039C0E1 /* StateManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC51990929083CFE0039C0E1 /* StateManager.swift */; };
+		AC51990B29083CFE0039C0E1 /* StateManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC51990929083CFE0039C0E1 /* StateManager.swift */; };
 		DD3338FB28D0CC6700C309E7 /* Tests_iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD3338FA28D0CC6700C309E7 /* Tests_iOS.swift */; };
 		DD3338FD28D0CC6700C309E7 /* Tests_iOSLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD3338FC28D0CC6700C309E7 /* Tests_iOSLaunchTests.swift */; };
 		DD33390728D0CC6700C309E7 /* Tests_macOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD33390628D0CC6700C309E7 /* Tests_macOS.swift */; };
@@ -57,6 +59,7 @@
 		AC142ACE2901B8D400A51092 /* InsideProject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsideProject.swift; sourceTree = "<group>"; };
 		AC142AD12901E12D00A51092 /* TerceiraTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TerceiraTab.swift; sourceTree = "<group>"; };
 		AC142AD42901E63000A51092 /* CardInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardInfo.swift; sourceTree = "<group>"; };
+		AC51990929083CFE0039C0E1 /* StateManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateManager.swift; sourceTree = "<group>"; };
 		DD3338E228D0CC6300C309E7 /* seed_foundationsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = seed_foundationsApp.swift; sourceTree = "<group>"; };
 		DD3338E328D0CC6300C309E7 /* PrimeiraTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimeiraTab.swift; sourceTree = "<group>"; };
 		DD3338E428D0CC6700C309E7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -127,6 +130,7 @@
 				AC142ACB2901B2F900A51092 /* CategoriesModel.swift */,
 				AC142AD12901E12D00A51092 /* TerceiraTab.swift */,
 				AC142AD42901E63000A51092 /* CardInfo.swift */,
+				AC51990929083CFE0039C0E1 /* StateManager.swift */,
 				DD3338E428D0CC6700C309E7 /* Assets.xcassets */,
 			);
 			path = Shared;
@@ -333,6 +337,7 @@
 				AC142AD22901E12D00A51092 /* TerceiraTab.swift in Sources */,
 				AC142AC92901B16000A51092 /* SegundaTab.swift in Sources */,
 				AC142ACC2901B2F900A51092 /* CategoriesModel.swift in Sources */,
+				AC51990A29083CFE0039C0E1 /* StateManager.swift in Sources */,
 				DD33390A28D0CC6700C309E7 /* seed_foundationsApp.swift in Sources */,
 				AC142AC62901AEB500A51092 /* MainTabView.swift in Sources */,
 				AC142ACF2901B8D400A51092 /* InsideProject.swift in Sources */,
@@ -349,6 +354,7 @@
 				AC142AD32901E12D00A51092 /* TerceiraTab.swift in Sources */,
 				AC142ACA2901B16000A51092 /* SegundaTab.swift in Sources */,
 				AC142ACD2901B2F900A51092 /* CategoriesModel.swift in Sources */,
+				AC51990B29083CFE0039C0E1 /* StateManager.swift in Sources */,
 				DD33390B28D0CC6700C309E7 /* seed_foundationsApp.swift in Sources */,
 				AC142AC72901AEB500A51092 /* MainTabView.swift in Sources */,
 				AC142AD02901B8D400A51092 /* InsideProject.swift in Sources */,

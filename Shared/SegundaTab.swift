@@ -9,6 +9,8 @@ import SwiftUI
 
 struct SegundaTab: View {
     
+    @ObservedObject var state : StateManager
+    
     let pesquisas = card_categoria.listar()
     
     let rows = [
@@ -24,7 +26,7 @@ struct SegundaTab: View {
                     
                     HStack {
                         
-                        NavigationLink (destination: PrimeiraTab()){
+                        NavigationLink (destination: PrimeiraTab(state: state)){
                             
                             Text(pesquisa.title).font(.title)
                             

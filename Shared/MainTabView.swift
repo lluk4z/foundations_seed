@@ -9,28 +9,30 @@ import SwiftUI
 
 struct MainTabView: View {
     
+    @ObservedObject var state = StateManager()
+    
     var body:some View {
         
         VStack {
             
             Text("Seed")
                 .font(.title)
-                .fontWeight(.light)
+                .fontWeight(.bold)
                 .foregroundColor(Color(red: 0.2039, green: 0.7804, blue: 0.3490))
             
             TabView {
                 
-                PrimeiraTab().tabItem{
+                PrimeiraTab(state: state).tabItem{
                     
                     Label("", systemImage: "house")
                     
                 }
-                SegundaTab().tabItem{
+                SegundaTab(state: state).tabItem{
                     
                     Label("", systemImage: "magnifyingglass")
                     
                 }
-                TerceiraTab().tabItem{
+                TerceiraTab(state: state).tabItem{
                     
                     Label("", systemImage: "heart")
                     

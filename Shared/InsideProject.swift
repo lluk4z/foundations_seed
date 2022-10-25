@@ -9,6 +9,7 @@ import SwiftUI
 
 struct InsideProject: View {
     
+    @ObservedObject var state : StateManager
     @ObservedObject var card: card_info
     @State var comentario = ""
     
@@ -35,16 +36,30 @@ struct InsideProject: View {
                     
                     Button{
                         
-                        card.favorito = true
+                        if(card.favorito){
+                            card.favorito = false
+                        }else {
+                            card.favorito = true
+                        }
+                        
+                        state.counter += 1
                         
                     } label: {
                         
-                        Image(systemName: "heart.fill")
+                        
+                        if(card.favorito){
+                            Image(systemName: "heart.fill")
+                                .accentColor(Color(red: 0.7039, green: 0.2304, blue: 0.3490))
+                                .font(.title)
+                                .padding([.bottom, .trailing])
+                        }else {
+                            Image(systemName: "heart.fill")
+                                .accentColor(Color(red: 0.5, green: 0.5, blue: 0.5))
+                                .font(.title)
+                                .padding([.bottom, .trailing])
+                        }
                         
                     }
-                    .accentColor(Color(red: 0.7039, green: 0.2304, blue: 0.3490))
-                    .font(.title)
-                    .padding([.bottom, .trailing])
                     
                 }
                 
