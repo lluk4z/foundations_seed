@@ -14,9 +14,11 @@ struct card_categoria: Identifiable {
     
     static func listar() -> [card_categoria] {
         return [
-            card_categoria(title: "Diversidade", cor: Color.red),
-            card_categoria(title: "Social", cor: Color.yellow),
-            card_categoria(title: "Trabalho", cor: Color.blue)
+            card_categoria(title: "Diversidade", cor: Color(red:0.204, green:0.78, blue:0.349)),
+            card_categoria(title: "Social", cor: Color(red:0.141, green:0.541, blue:0.239)),
+            card_categoria(title: "Trabalho", cor: Color(red:0.502, green:0.765, blue:0.569)),
+            card_categoria(title: "Mulheres", cor: Color(red:0.204, green:0.78, blue:0.349))
+            
         ]
     }
 }

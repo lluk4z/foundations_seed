@@ -23,8 +23,9 @@ class card_info: ObservableObject, Identifiable {
     var imgPrev: [String]
     @Published var comments: [String]
     @Published var favorito: Bool
+    var categorias: [String]
     
-    init(addressStreet: String, addressCity: String, email: String, number: String, instagram: String, linkedin: String, fullText: String, iconImg: String, title: String, textPreview: String, imgPrev: [String], comments: [String], favorito: Bool) {
+    init(addressStreet: String, addressCity: String, email: String, number: String, instagram: String, linkedin: String, fullText: String, iconImg: String, title: String, textPreview: String, imgPrev: [String], comments: [String], favorito: Bool, categorias: [String]) {
         
         self.addressStreet = addressStreet
         self.addressCity = addressCity
@@ -39,6 +40,7 @@ class card_info: ObservableObject, Identifiable {
         self.imgPrev = imgPrev
         self.comments = comments
         self.favorito = false
+        self.categorias = categorias
         
     }
     

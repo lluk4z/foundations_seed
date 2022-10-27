@@ -9,6 +9,7 @@ import SwiftUI
 struct PrimeiraTab: View {
     
     @ObservedObject var state : StateManager
+    var filtro : String
 
     let rows = [
         GridItem(.fixed(1)),
@@ -19,55 +20,59 @@ struct PrimeiraTab: View {
 
         NavigationView {
 
-                List(ProjectsModel.projects){ card in
+            List(ProjectsModel.projects){ card in
+                
+                if(card.categorias.contains(filtro)){
                     
                     VStack{
-
+                        
                         NavigationLink (destination: InsideProject(state: state, card: card)){
-
+                            
                             HStack(alignment: .top) {
-
+                                
                                 Image(card.iconImg)
                                     .aspectRatio(contentMode: .fit)
                                 
                                 VStack(alignment: .leading, spacing: 0.0){
-
+                                    
                                     Text(card.title)
                                         .fontWeight(.bold)
                                         .multilineTextAlignment(.leading)
                                         .padding([.bottom, .leading])
-
+                                    
                                     Text(card.textPreview)
                                         .font(.caption)
                                         .fontWeight(.regular)
                                         .multilineTextAlignment(.leading)
                                         .padding(.leading)
                                         .padding(.bottom)
-
+                                    
                                 }.multilineTextAlignment(.trailing)
-
+                                
                             }
-
+                            
                         }
                         .navigationBarHidden(true)
-
+                        
                         ScrollView(.horizontal) {
-
+                            
                             HStack {
-
+                                
                                 ForEach(card.imgPrev, id: \.self) { img in
                                     Image(img)
                                         .resizable()
                                         .aspectRatio(contentMode: .fit)
-
+                                    
                                 }
-
+                                
                             }
-
+                            
                         }.frame(height: 200)
-
+                        
                     }
-
+                    
+                }
+                
             }
 
             }

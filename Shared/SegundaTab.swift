@@ -26,24 +26,22 @@ struct SegundaTab: View {
                     
                     HStack {
                         
-                        NavigationLink (destination: PrimeiraTab(state: state)){
+                        NavigationLink (destination: PrimeiraTab(state: state, filtro: pesquisa.title)){
                             
-                            Text(pesquisa.title).font(.title)
+                            Text(pesquisa.title)
+                                .font(.title)
+                                .bold()
+                                .foregroundColor(Color.white)
                             
                         }
                         
                     }
-                    .padding(.vertical, 100.0)
+                    .padding(.vertical, 50.0)
                     .padding(.leading, 55.0)
                     .padding(.trailing, 55.0)
                     .multilineTextAlignment(.center)
-                    .background(
-                        LinearGradient(
-                            colors: [
-                                pesquisa.cor,
-                                Color(red: 0.2039, green: 0.7804, blue: 0.3490)],
-                            startPoint: .top,
-                            endPoint: .bottom))
+                    .background(pesquisa.cor)
+                    .cornerRadius(23)
                     
                 }
                 .padding(.vertical, 2.0)

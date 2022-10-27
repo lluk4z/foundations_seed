@@ -21,7 +21,8 @@ class ProjectsModel: ObservableObject {
                   textPreview: "A Apple Developer Academy é um projeto de capacitação criado em parceria entre o Centro de Infor....",
                   imgPrev: ["img01", "img02", "appledeveloperacademyimage3"],
                   comments: ["Ótimo projeto, muito incrivel, possibilita muitas oportunidades e entrega espaco para aprender","Como e o ambiente?","Bem diversificado, bom para pessoas que querem entrar na area de programacao","Abre alguma oportunidade?", "Me possibilitou encontrar um emprego depois"],
-                  favorito: false),
+                  favorito: false,
+                  categorias: ["Todos", "Diversidade", "Trabalho"]),
          card_info(addressStreet: "Sem sede fixa",
                    addressCity: "Recife - PE",
                    email: "recife@pyladies.com",
@@ -34,7 +35,8 @@ class ProjectsModel: ObservableObject {
                    textPreview: "A pyLadies é uma comunidade com foco em diversidade em empoderamento feminino que busca trazer...",
                    imgPrev: ["img03", "img04", "pyladiesimg3", "logoLady"],
                    comments: ["FINALMENTE, um projeto assim aqui em Recife, estávamos precisando muito","É realmente bom, vocês recomendam?","É simplesmente incrível, aprendi muito com este projeto", "Adoro participar, sintam-se à vontade para interagir","Muito feliz com esse projeto", "Diversidade é isso"],
-                   favorito: false),
+                   favorito: false,
+                   categorias: ["Todos", "Social", "Mulheres"]),
          card_info(addressStreet: "Av. Jorn. Aníbal Fernandes, s/n",
                    addressCity: "Recife - PE, 50740-560",
                    email: "https://pet.cin.ufpe.br/",
@@ -47,7 +49,8 @@ class ProjectsModel: ObservableObject {
                    textPreview: "O Programa de Educação Tutorial foi criado para apoiar atividades que integram ensino, pesquisa e extensão...",
                    imgPrev: ["petpresentation", "petvisita", "petworkshops"],
                    comments: ["Estou interessada, tem algum número para contato?", "Não, mas pode falar com eles pelas redes sociais", "Que masssa, amei o projeto", "Primeiro projeto que participei, ajudou muito minha vida acadêmica", "Vi que eles estavam com projeto para doar sangue", "Nossa, legal, vou ver como participar"],
-                   favorito: false)
+                   favorito: false,
+                   categorias: ["Todos", "Diversidade", "Social"])
     ]
     
 }

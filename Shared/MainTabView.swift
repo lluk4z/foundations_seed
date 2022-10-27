@@ -22,7 +22,7 @@ struct MainTabView: View {
             
             TabView {
                 
-                PrimeiraTab(state: state).tabItem{
+                PrimeiraTab(state: state, filtro: "Todos").tabItem{
                     
                     Label("", systemImage: "house")
                     
